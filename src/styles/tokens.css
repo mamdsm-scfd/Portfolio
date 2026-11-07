@@ -1,0 +1,67 @@
+/* ─────────────────────────────────────────────
+   Nabni design tokens — from D:\new system design\design-system\project\tokens.json
+   Light = the official "سمني" theme. Dark = derived from the identity's own code surface
+   (code-bg / code-fg / code-accent / code-muted), so it stays warm and on-brand.
+   Rules kept: solid layers for depth, no gradients, no blur, no glow.
+   ───────────────────────────────────────────── */
+:root {
+  --ground: #EDE6D6;
+  --surface: #F6F1E6;
+  --edge: #D6CAB2;
+  --ink: #2E2A24;
+  --ink-muted: #6B6355;
+  --clay: #B8623F;        /* symbols, icons, text ≥ 24px */
+  --clay-deep: #9A4D2E;   /* coloured half of titles, small text, buttons */
+  --clay-tint: #E3C3AE;   /* glyph shadow — never text */
+  --on-clay: #FFFAF2;
+  --btn: var(--clay-deep);
+  --btn-edge: #6E3620;
+  --on-btn: var(--on-clay);
+  --code-bg: #2E2A24;
+  --code-fg: #F6F1E6;
+  --code-accent: #E0926F;
+  --code-muted: #B5AB98;
+  --line: rgba(46, 42, 36, 0.12);
+  --focus: #35617D;       /* identity "note" colour, used for focus rings */
+
+  --font-brand: "Sora", "Alexandria", system-ui, sans-serif;
+  /* Alexandria after the mono face: Arabic glyphs inside mono labels fall back to the brand Arabic font */
+  --font-code: "JetBrains Mono", "Alexandria", ui-monospace, monospace;
+
+  --r-sm: 10px;
+  --r-md: 18px;
+  --r-lg: 28px;
+  --r-xl: 40px;
+
+  --layer: 0 8px 0 var(--edge);
+  --layer-sm: 0 5px 0 var(--edge);
+  --layer-xs: 0 3px 0 var(--edge);
+
+  --gutter: clamp(16px, 4.5vw, 48px);
+  --max: 1220px;
+  --section-y: clamp(88px, 12vw, 160px);
+
+  --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
+  --ease-in-out: cubic-bezier(0.65, 0, 0.35, 1);
+
+  color-scheme: light;
+}
+
+:root[data-theme="dark"] {
+  --ground: #1C1915;
+  --surface: #27231E;
+  --edge: #0E0C0A;
+  --ink: #F1EADB;
+  --ink-muted: #B5AB98;
+  --clay: #E0926F;
+  --clay-deep: #EBA886;
+  --clay-tint: #4A3226;
+  --on-clay: #1C1915;
+  --btn: #E0926F;
+  --btn-edge: #8A4A2F;
+  --on-btn: #1C1915;
+  --code-bg: #12100D;
+  --line: rgba(241, 234, 219, 0.1);
+  --focus: #8DB7D1;
+  color-scheme: dark;
+}
